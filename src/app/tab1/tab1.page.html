@@ -1,0 +1,47 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+<ion-content [fullscreen]="true" color="primary">
+  <ion-card-header color="tertiary">
+    <ion-card-title>Завдання №1</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p color="tertiary  ">Задано три числа. Знайти суму квадратів чисел, якщо їхні перші цифри непарні.</p>
+      <div>
+        <ion-item>
+          <ion-input
+            label="Перше число"
+            labelPlacement="stacked"
+            type="number"
+            id="a"
+            value="1"
+            #Inputa
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Друге число"
+            labelPlacement="stacked"
+            type="number"
+            id="b"
+            value="2"
+            #Inputb
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Третє число"
+            labelPlacement="stacked"
+            type="number"
+            id="c"
+            value="3"
+            #Inputc
+          ></ion-input>
+        </ion-item>
+      </div>
+      <ion-button
+      color="secondary" 
+      expand="block"
+      (click)="calculate(Inputa.value, Inputb.value, Inputc.value)"
+      >Розрахунок</ion-button>
+        <p>Результат обчислення: {{result}}</p>
+  </ion-card-content>
+</ion-content> 

@@ -1,0 +1,32 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+<ion-content [fullscreen]="true" color="primary">
+  <ion-card-header color="tertiary">
+    <ion-card-title>Завдання №3</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>Згенерувати матрицю розміром NxN. Знайдіть середнє арифметичне елементів на головній діагоналі.</p>
+        <ion-item>
+          <ion-input
+            label="Розмір матриці"
+            labelPlacement="stacked"
+            type="number"
+            id=""
+            value="1"
+            #Inputn
+          ></ion-input>
+        </ion-item>
+      <ion-button
+      color="secondary" 
+      expand="block"
+      (click)="generateMatrix(Inputn.value)"
+      >Розрахунок</ion-button>
+      <ion-grid>
+        <ion-row *ngFor="let i of matrix">
+          <ion-col *ngFor="let j of i">
+            {{j}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <p [innerHTML]="result"></p>
+  </ion-card-content>
+</ion-content> 
