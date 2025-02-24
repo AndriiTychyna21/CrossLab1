@@ -22,7 +22,7 @@ export class Tab1Page {
     let bdig: number = this.getFirstDigit(bn);
     let cdig: number = this.getFirstDigit(cn);
     if (adig % 2 !== 0 && bdig % 2 !== 0 && cdig % 2 !== 0){
-      this.result = String(Math.pow(an, 3)+Math.pow(bn, 3)+Math.pow(cn, 3));
+      this.result = String(Math.pow(an, 2)+Math.pow(bn, 2)+Math.pow(cn, 2));
     }
     else {
       this.result = "Не у всіх чисел перша цифра непарна";
