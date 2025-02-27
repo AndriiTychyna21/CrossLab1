@@ -1,0 +1,26 @@
+<app-my-header name="Лабораторна робота №3"></app-my-header>
+<ion-content [fullscreen]="true" color="primary">
+  <ion-item color="tertiary">
+    <ion-label сlass="task">Знайти структуру з найбільшою та найменшою висотою.</ion-label>
+  </ion-item>
+  <ion-card class="main-card">
+    <ion-card-header>
+      <ion-card-title>Архітектурні споруди</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item color="tertiary">
+        <ion-label>Показати тільки найвищу та найнижчу споруду</ion-label>
+        <ion-checkbox slot="end" [(ngModel)]="filterHighLow" (ionChange)="filterStructures()"></ion-checkbox>
+      </ion-item>
+      
+      <ion-card *ngFor="let arch of showList; index as i">
+        <ion-card-header>
+          <ion-card-title>{{arch.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>{{arch.displayInfo()}}</ion-label>
+        </ion-card-content>
+      </ion-card> 
+    </ion-card-content>
+  </ion-card>
+</ion-content>
