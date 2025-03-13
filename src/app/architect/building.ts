@@ -4,6 +4,7 @@ export class Building extends Architecture{
     numberOfFloors: number
     constructor(n: string, h: number, y: number, nf: number){
         super(n, h, y);
+        if (nf <= 0) throw new Error("Number of floors isn`t positive");
         this.numberOfFloors = nf;
     }
 

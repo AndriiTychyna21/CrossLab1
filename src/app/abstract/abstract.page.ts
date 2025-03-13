@@ -36,7 +36,6 @@ export class AbstractPage implements OnInit {
 
   ngOnInit() {
     this.loadData();
-    this.showList = this.archList.archList;
   }
 
   loadData() {
@@ -56,7 +55,6 @@ export class AbstractPage implements OnInit {
 
   filterStructures() {
     if (this.filterHighLow) {
-      // Знаходимо найвищу і найнижчу структуру
       const highest = this.archList.archList.reduce((prev, current) => (prev.height > current.height) ? prev : current);
       const lowest = this.archList.archList.reduce((prev, current) => (prev.height < current.height) ? prev : current);
       

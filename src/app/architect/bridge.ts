@@ -1,10 +1,10 @@
-import { expand } from "rxjs";
 import { Architecture } from "./architecure";
 
 export class Bridge extends Architecture {
     length: number;
     constructor(n: string, h: number, y: number, l: number){
         super(n, h, y);
+        if (l <= 0) throw new Error("Length isn`t positive");
         this.length = l;
     }
 
